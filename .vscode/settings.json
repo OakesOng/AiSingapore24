@@ -1,0 +1,6 @@
+{
+  "python.analysis.autoImportCompletions": true,
+  "bitoAI.codeCompletion.enableAutoCompletion": false,
+  "bitoAI.codeCompletion.enableCommentToCode": false,
+  "bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 50
+}
