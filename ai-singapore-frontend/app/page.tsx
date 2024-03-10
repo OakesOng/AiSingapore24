@@ -1,6 +1,13 @@
-import Image from "next/image";
-import Chat from "@/components/chat";
+import Image from 'next/image';
+import Chat from '@/components/chat';
+import Navbar from '@/components/Navbar';
 
 export default function Home() {
-  return <Chat />;
+  const content = (
+    <>
+      <Navbar />
+      <Chat />
+    </>
+  );
+  return content;
 }
