@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_00000079453336953842704560000002836840946114312082_);}
+	.st1{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{fill:none;stroke:#020202;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+	.st3{fill:none;stroke:#586BCE;stroke-width:1.5;stroke-linejoin:round;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="6.7" y="6.8" width="50.5" height="50.5"/>
+	</defs>
+	<clipPath id="SVGID_00000119823631396790811330000001288290540566151576_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g id="Group_4641" style="clip-path:url(#SVGID_00000119823631396790811330000001288290540566151576_);">
+		<path id="Path_2634" class="st1" d="M31.8,54c0-2.1-1.7-3.7-3.7-3.7c0,0,0,0,0,0H10.6V23.9h17.5c2.1,0,3.7,1.7,3.7,3.7
+			c0,0,0,0,0,0V54L31.8,54z"/>
+		<path id="Path_2635" class="st1" d="M53.1,44V23.9H35.7c-2.1,0-3.7,1.7-3.7,3.7l0,0V54c0-2.1,1.7-3.7,3.7-3.7l0,0h8.8"/>
+		<path id="Path_2636" class="st2" d="M7.5,26.9c0,8.7,0,17.7,0,26.4c7.2,0,14.1,0,21.3,0l0,0.2c0,1.6,1.3,2.9,2.9,2.9
+			c1.6,0,2.9-1.3,2.9-2.9l0-0.2c3.3,0,6.6,0,9.8,0"/>
+		<path id="Path_2637" class="st3" d="M43.8,42.8l5.7,12.9l1.6-5.7l5-1.3L43.8,42.8z"/>
+		<line id="Line_617" class="st1" x1="56.5" y1="26.7" x2="56.5" y2="45.2"/>
+		<line id="Line_618" class="st1" x1="20.6" y1="19.1" x2="16.2" y2="16.5"/>
+		<line id="Line_619" class="st1" x1="31.6" y1="13.1" x2="31.6" y2="7.6"/>
+		<line id="Line_620" class="st1" x1="42.6" y1="19.2" x2="47.3" y2="16.4"/>
+		<line id="Line_621" class="st1" x1="38" y1="14.5" x2="39.9" y2="12.2"/>
+		<line id="Line_622" class="st1" x1="25.2" y1="14.6" x2="23.7" y2="12"/>
+		<line id="Line_623" class="st1" x1="16.5" y1="34.2" x2="26.2" y2="34.2"/>
+		<line id="Line_624" class="st1" x1="16.4" y1="38.4" x2="26.3" y2="38.4"/>
+		<line id="Line_625" class="st1" x1="16.4" y1="42.5" x2="26.3" y2="42.5"/>
+	</g>
+</g>
+</svg>

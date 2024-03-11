@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_00000049216922338625563050000013222902673662059450_);}
+	.st1{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{fill:none;stroke:#586BCE;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g>
+	<g id="Artboard_4">
+		<g id="Group_1363" transform="translate(6 9)">
+			<g>
+				<defs>
+					<rect id="SVGID_1_" width="51.5" height="46.5"/>
+				</defs>
+				<clipPath id="SVGID_00000121271591675087887380000013807508115393833089_">
+					<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+				</clipPath>
+				<g id="Group_1362" style="clip-path:url(#SVGID_00000121271591675087887380000013807508115393833089_);">
+					<path id="Rectangle_818" class="st1" d="M3.7,40h44.1c1.5,0,2.8,1.2,2.8,2.8v0c0,1.5-1.2,2.8-2.8,2.8H3.7
+						c-1.5,0-2.8-1.2-2.8-2.8v0C0.9,41.2,2.2,40,3.7,40z"/>
+					<line id="Line_104" class="st1" x1="46.7" y1="15.9" x2="46.7" y2="39.1"/>
+					<path id="Path_1068" class="st1" d="M5,12.6v-2.3c0-2.6,2.1-4.6,4.7-4.6h16.6"/>
+					<line id="Line_105" class="st1" x1="5" y1="39.1" x2="5" y2="32.2"/>
+					<path id="Path_1069" class="st1" d="M48.7,0.9H31.2c-0.6,0-1.2,0.5-1.2,1.2v9.8c0,0.6,0.5,1.2,1.2,1.2h2.6
+						c0.6,0,1.2,0.5,1.2,1.2c0,0.6,0.5,1.2,1.2,1.2c0.4,0,0.7-0.2,0.9-0.4l1.2-1.5c0.2-0.3,0.6-0.4,0.9-0.4h9.6
+						c0.6,0,1.2-0.5,1.2-1.2V2.1C49.9,1.4,49.4,0.9,48.7,0.9z"/>
+					<path id="Path_1070" class="st2" d="M3,16h17.6c0.6,0,1.2,0.5,1.2,1.2V27c0,0.6-0.5,1.2-1.2,1.2c0,0,0,0,0,0H18
+						c-0.6,0-1.2,0.5-1.2,1.2c0,0.6-0.5,1.2-1.2,1.2c-0.4,0-0.7-0.2-0.9-0.4l-1.2-1.5c-0.2-0.3-0.6-0.4-0.9-0.4H3
+						c-0.6,0-1.2-0.5-1.2-1.2v-9.8C1.9,16.6,2.4,16,3,16z"/>
+					<path id="Path_1071" class="st1" d="M10.4,13c0-1.4,1.1-2.5,2.5-2.5l0,0h13.1"/>
+					<path id="Path_1072" class="st1" d="M41.3,16.8v17.5c0,1.4-1.1,2.5-2.5,2.5l0,0H12.9c-1.4,0-2.5-1.1-2.5-2.5l0,0V31"/>
+					<line id="Line_106" class="st2" x1="8.4" y1="20.8" x2="14.8" y2="20.8"/>
+					<line id="Line_107" class="st2" x1="8.2" y1="24" x2="15.1" y2="24"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
