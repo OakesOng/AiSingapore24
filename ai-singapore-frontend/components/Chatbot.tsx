@@ -1,0 +1,84 @@
+'use client';
+import { useState, useEffect, ChangeEvent, FormEvent, useRef } from 'react';
+import TypingAnimation from '@/components/TypingAnimation';
+import { ScrollArea } from '@/components/ui/scroll-area';
+
+export default function Chatbot() {
+  const [inputValue, setInputValue] = useState('');
+  const [chatlog, setChatlog] = useState<{ type: string; message: string }[]>(
+    []
+  );
+  const [isLoading, setIsLoading] = useState(false);
+  const messageEndRef = useRef<HTMLDivElement>(null);
+
+  // form functions
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setChatlog((prevChatLog) => [
+      ...prevChatLog,
+      { type: 'user', message: inputValue },
+    ]);
+    setInputValue(''); // clear input value
+  };
+
+  useEffect(() => {
+    if (messageEndRef.current === null) return;
+    messageEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [chatlog]);
+
+  return (
+    <div className='w-full'>
+      <div className='flex h-[89.3vh] flex-col bg-gray-900'>
+        <h1 className='bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text py-3 text-center text-4xl font-bold text-transparent'>
+          Chatting with Old Bird...
+        </h1>
+        <div className='flex flex-grow flex-col overflow-y-auto p-6'>
+          <ScrollArea>
+            <div className='space-y-4'>
+              {chatlog.map((message, index) => (
+                <div
+                  key={index}
+                  className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                >
+                  <div
+                    className={`${message.type === 'user' ? 'bg-purple-500' : 'bg-gray-800'} max-w-sm rounded-lg p-4 text-white`}
+                  >
+                    {message.message}
+                  </div>
+                </div>
+              ))}
+              <div className='justify-start'>
+                <div className='max-w-20 rounded-lg bg-gray-800 p-4 text-white'>
+                  <TypingAnimation />
+                </div>
+              </div>
+              <div ref={messageEndRef} />
+            </div>
+          </ScrollArea>
+        </div>
+        <form onSubmit={handleSubmit} className='flex-none p-6'>
+          <div className='flex rounded-lg border border-gray-700 bg-gray-800'>
+            <input
+              type='text'
+              placeholder='Ask me anything....'
+              value={inputValue}
+              onChange={handleInputChange}
+              className='flex-grow bg-transparent px-4 py-2 text-white focus:outline-none'
+            />
+            <button
+              type='submit'
+              className='rounded-lg bg-purple-500 px-4 py-2 font-semibold text-white transition-colors duration-300 hover:bg-purple-600 focus:outline-none'
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}

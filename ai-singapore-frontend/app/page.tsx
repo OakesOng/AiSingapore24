@@ -92,7 +92,7 @@ export default function Home() {
               </Link>
             </div>
             <div className='text-center transition-all duration-500 hover:-translate-y-1'>
-              <Link href='/' className='text-pretty'>
+              <Link href='/chat' className='text-pretty'>
                 <div className='flex flex-col items-center hover:text-indigo-500'>
                   <Image
                     src='/oldbird-bw.jpg'
