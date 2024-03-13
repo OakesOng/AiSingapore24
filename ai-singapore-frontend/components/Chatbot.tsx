@@ -2,6 +2,7 @@
 import { useState, useEffect, ChangeEvent, FormEvent, useRef } from 'react';
 import TypingAnimation from '@/components/TypingAnimation';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function Chatbot() {
   const [inputValue, setInputValue] = useState('');
@@ -45,18 +46,37 @@ export default function Chatbot() {
                   key={index}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  <div
-                    className={`${message.type === 'user' ? 'bg-purple-500' : 'bg-gray-800'} max-w-sm rounded-lg p-4 text-white`}
-                  >
-                    {message.message}
-                  </div>
+                  {message.type === 'user' && (
+                    <>
+                      <div className='flex items-center'>
+                        <div className='max-w-sm rounded-lg bg-purple-500 px-4 pb-4 pt-2 text-white'>
+                          <p className='mb-3 flex justify-start'>
+                            <u>You{'\u00A0'}</u>
+                          </p>
+                          {message.message}
+                        </div>
+                        <Avatar className='ml-4 mr-2'>
+                          <AvatarImage src='/user_profile.webp' />
+                        </Avatar>
+                      </div>
+                    </>
+                  )}
                 </div>
               ))}
-              <div className='justify-start'>
-                <div className='max-w-20 rounded-lg bg-gray-800 p-4 text-white'>
-                  <TypingAnimation />
-                </div>
-              </div>
+              {!isLoading && (
+                <>
+                  <div className='flex items-center'>
+                    <Avatar className='ml-2 mr-4'>
+                      <AvatarImage src='/oldbird.jpeg' />
+                    </Avatar>
+                    <div className='justify-start'>
+                      <div className='rounded-lg bg-gray-800 p-4 text-white'>
+                        <TypingAnimation />
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
               <div ref={messageEndRef} />
             </div>
           </ScrollArea>

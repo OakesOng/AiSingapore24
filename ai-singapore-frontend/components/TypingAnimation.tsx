@@ -1,9 +1,29 @@
 export default function TypingAnimation() {
+  const text = '.....';
+  const lettersAndSpaces = text.split(''); // Split the text into individual letters and spaces
+
+  // Fixed duration for the bounce animation
+  const bounceDuration = '1.1s';
+
   const content = (
-    <div className='item-center flex space-x-2'>
-      <div className='h-4 w-4 animate-pulse rounded-full bg-gradient-to-r from-gray-400 to-gray-600 '></div>
-      <div className='h-4 w-4 animate-pulse rounded-full bg-gradient-to-r from-gray-400 to-gray-600 delay-75'></div>
-      <div className='h-4 w-4 animate-pulse rounded-full bg-gradient-to-r from-gray-400 to-gray-600 delay-150'></div>
+    <div className='item-center flex'>
+      <div>
+        <p>Lemme think{'\u00A0'}</p>
+      </div>
+      <div className='flex'>
+        {lettersAndSpaces.map((char, index) => (
+          <span
+            key={index}
+            className={char === ' ' ? '' : 'animate-bounce'}
+            style={{
+              animationDuration: bounceDuration,
+              animationDelay: `${Math.floor(index / 2) * 0.9 + (index % 2) * 0.2}s`, // Adjust the delay based on the index
+            }}
+          >
+            {char === ' ' ? '\u00A0' : char}
+          </span>
+        ))}
+      </div>
     </div>
   );
   return content;
