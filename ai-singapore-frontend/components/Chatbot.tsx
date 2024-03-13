@@ -71,6 +71,9 @@ export default function Chatbot() {
                     </Avatar>
                     <div className='justify-start'>
                       <div className='rounded-lg bg-gray-800 p-4 text-white'>
+                        <p className='mb-3 flex justify-start'>
+                          <u>Old Bird{'\u00A0'}</u>
+                        </p>
                         <TypingAnimation />
                       </div>
                     </div>
