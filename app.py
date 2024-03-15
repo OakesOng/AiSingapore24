@@ -1,4 +1,4 @@
-import os
+from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.chat_models import ChatOpenAI
@@ -7,8 +7,7 @@ from langchain.prompts import PromptTemplate
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-os.environ['OPENAI_API_KEY'] = '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'
-
+load_dotenv()
 embeddings = OpenAIEmbeddings()
 
 db_openAI = FAISS.load_local("openAI_index", embeddings)
@@ -54,7 +53,6 @@ def process_message():
     result = retrieved.get('result')
     print(retrieved)
     print(jsonify(result))
-    
     return jsonify(result)
 
 app.run(use_reloader = False, debug = True)
