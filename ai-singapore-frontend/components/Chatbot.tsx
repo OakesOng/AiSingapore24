@@ -16,16 +16,58 @@ export default function Chatbot() {
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setIsLoading(true);
+
+    // Add user message to chatlog
     setChatlog((prevChatLog) => [
       ...prevChatLog,
       { type: 'user', message: inputValue },
     ]);
-    setInputValue(''); // clear input value
+
+    const url = "http://127.0.0.1:5000"
+    try {
+      // Send POST request to backend
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: inputValue }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      // Parse JSON response
+      const data = await response.json();
+      console.log(data);
+
+      setIsLoading(false);
+
+      // Add backend response to chatlog
+      setChatlog((prevChatLog) => [
+        ...prevChatLog,
+        { type: 'bot', message: data },
+      ]);
+    } catch (error) {
+      console.error('Error fetching response from backend:', error);
+    }
+
+    setInputValue(''); // Clear input value
+    setIsLoading(false); // Set loading state back to false
+    
+
+    // Scroll to the bottom of the chatlog
+    if (messageEndRef.current !== null) {
+      messageEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
+
 
   useEffect(() => {
     if (messageEndRef.current === null) return;
