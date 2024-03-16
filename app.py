@@ -92,7 +92,7 @@ def process_message():
     retrieved = qa_with_source({"question":message, "chat_history":memory.chat_memory})
     result = retrieved.get('answer')
     print(retrieved)
-    retrieved = parse_message(retrieved)
+    result = parse_message(result)
     print(jsonify(result))
     return jsonify(result)
 
