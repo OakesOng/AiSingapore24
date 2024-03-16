@@ -7,6 +7,21 @@ from langchain.prompts import PromptTemplate
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
+def parse_message(text):
+    paragraphs = re.split('\n\n', text)
+    parsed_message = {"paragraphs": []}
+    for paragraph in paragraphs:
+        links = re.findall(r'\[([^]]+)\]\(([^)]+)\)', paragraph)
+        if links:
+            paragraph_text = re.sub(r'\[([^]]+)\]\(([^)]+)\)', '', paragraph)
+            parsed_paragraph = {"text": paragraph_text.strip(), "links": []}
+            for label, url in links:
+                parsed_paragraph["links"].append({"label": label, "url": url})
+            parsed_message["paragraphs"].append(parsed_paragraph)
+        else:
+            parsed_message["paragraphs"].append({"text": paragraph.strip()})
+    return parsed_message
+
 load_dotenv()
 embeddings = OpenAIEmbeddings()
 
@@ -75,8 +90,9 @@ CORS(app)
 def process_message():
     message = request.get_json().get('message')
     retrieved = qa_with_source({"question":message, "chat_history":memory.chat_memory})
-    result = retrieved.get('result')
+    result = retrieved.get('answer')
     print(retrieved)
+    retrieved = parse_message(retrieved)
     print(jsonify(result))
     return jsonify(result)
 
