@@ -1,7 +1,8 @@
 from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.chat_models import ChatOpenAI
+from langchain_community.vectorstores import FAISS
+from langchain_openai import ChatOpenAI
+from langchain.chains import ConversationalRetrievalChain
 from langchain.chains.conversation.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate
 from flask import Flask, request, jsonify
@@ -10,7 +11,7 @@ from flask_cors import CORS
 load_dotenv()
 embeddings = OpenAIEmbeddings()
 
-db_openAI = FAISS.load_local("openAI_index", embeddings)
+db_openAI = FAISS.load_local("openAI_index", embeddings, allow_dangerous_deserialization=True)
 
 retriever = db_openAI.as_retriever(search_kwargs={'k':2})
 
@@ -74,10 +75,9 @@ CORS(app)
 @app.route('/', methods=['POST'])
 def process_message():
     message = request.get_json().get('message')
+    print(message)
     retrieved = qa_with_source({"question":message, "chat_history":memory.chat_memory})
-    result = retrieved.get('result')
-    print(retrieved)
-    print(jsonify(result))
+    result = retrieved.get('answer')
     return jsonify(result)
 
 app.run(use_reloader = False, debug = True)

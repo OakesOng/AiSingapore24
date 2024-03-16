@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Chat from '@/components/chat';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 
