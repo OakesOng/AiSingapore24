@@ -1,2 +1,11 @@
 input,expected_output,actual_output,relevance,correctness,justification
 hello,model to greet the user back,,,,
+what can you do,model to respond with its functions,,,,
+recommend a course for data science,model to recommend any course for data science,,,,
+recommend a course for note taking,model to recommend any course for note taking,,,,
+recommend a course for powerpoint,model to recommend any course for powerpoint,,,,
+recommend a course for switching careers from software developer to design,model to recommend any course for design that accounts for user background,,,,
+recommend a course for switching careers from electrical engineer to entrepreneur,model to recommend any course for entrepreneur that accounts for user background,,,,
+what are the career propects for a graphics designer? recommend a course, model to provide advice on a graphics design career then provide courses for said career,,,,
+recommend a course for any languages under $5000, model to recommend a language course under $5000,,,,
+recommend a course for data science. provide more details about the previous course, model to recommend a course for data science then provide details for said course,,,,
