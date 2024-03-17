@@ -110,7 +110,7 @@ export default function Chatbot() {
                   {message.type === 'user' ? (
                     <>
                       <div className='flex items-center'>
-                        <div className='max-w-sm rounded-lg bg-purple-500 px-4 pb-4 pt-2 text-white'>
+                        <div className='rounded-lg bg-purple-500 px-4 pb-4 pt-2 text-white'>
                           <p className='mb-3 flex justify-start'>
                             <u>You{'\u00A0'}</u>
                           </p>
