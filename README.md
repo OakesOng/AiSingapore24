@@ -28,6 +28,7 @@ The SkillFuture portal is a treasure trove of learning opportunities, but its sh
 
 ### Prerequisites
 - Python 3.11.8 or higher
+- Node.js 20.11.1
 - Git
 
 ### Installation
@@ -49,19 +50,19 @@ Enter your OpenAI API Key into a .env file:
 <img width="900" alt=".env file" src="https://github.com/OakesOng/AiSingapore24/blob/main/env.png">
 
 
-Launch the chat service locally :
+Launch a terminal for frontend:
 
 ```bash
-streamlit run app.py
+cd ai-singapore-frontend/
+npm install
+npm run dev
+```
+
+Launch another terminal for backend
+```bash
+cd ai-singapore-backend/
+python app.py
 ```
 
 #### That's it! The service is now up and running locally. 🤗
 
-## Example ScreenShot
-<img width="1470" alt="Screenshot 2023-12-09 at 1 19 28 AM" src="https://github.com/devapraveenk/FAQ_Chatbot_using_LangChain_V1/assets/115524697/f499c8f5-9a0d-4b3d-8165-37e6d4da48e7">
-
-
-## Note❗️❗️❗️
-Make sure the CSV file have two columns only for better results 
-### Example
-<img width="1390" alt="Screenshot 2023-12-09 at 1 32 58 AM" src="https://github.com/devapraveenk/FAQ_Chatbot_using_LangChain_V1/assets/115524697/d4ae4ffc-0818-4263-a8cc-a502d102c859">
