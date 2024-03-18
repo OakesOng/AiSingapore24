@@ -1,17 +1,23 @@
 'use client';
+// Import React hooks and components
 import { useState, useEffect, ChangeEvent, FormEvent, useRef } from 'react';
 import TypingAnimation from '@/components/TypingAnimation';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
+// Define and export the Chatbot component
 export default function Chatbot() {
+  // State variables for input value, chatlog, and loading status
   const [inputValue, setInputValue] = useState('');
   const [chatlog, setChatlog] = useState<{ type: string; message: string }[]>(
     []
   );
   const [isLoading, setIsLoading] = useState(false);
+
+  // Reference for scrolling to the end of chatlog
   const messageEndRef = useRef<HTMLDivElement>(null);
 
+  // Function to process courses text
   function processCoursesText(text: string) {
     // Define a regular expression to match URLs
     const urlRegex = /\[(.*?)\]\((https?:\/\/[^\s]+?)\)/g;
@@ -34,24 +40,28 @@ export default function Chatbot() {
     return formattedCourses.join('');
   }
 
-  // form functions
+  // Event handler for input change
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
 
+  // Event handler for form submission
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Set loading state
     setIsLoading(true);
-    setInputValue(''); // Clear input value
 
     // Add user message to chatlog
     setChatlog((prevChatLog) => [
       ...prevChatLog,
       { type: 'user', message: inputValue },
     ]);
-    setInputValue(''); // Clear input value
 
+    // Clear input value
+    setInputValue('');
+
+    // Backend API URL
     const url = 'http://127.0.0.1:5000';
     try {
       // Send POST request to backend
@@ -63,13 +73,15 @@ export default function Chatbot() {
         body: JSON.stringify({ message: inputValue }),
       });
 
+      // Throw error if response is not OK
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
 
+      // Parse response data
       var data = await response.json();
-      console.log('fetching from backend successful');
-      console.log(data);
+
+      // Process response data
       data = processCoursesText(data);
 
       // Add backend response to chatlog
@@ -80,19 +92,19 @@ export default function Chatbot() {
     } catch (error) {
       console.error('Error fetching response from backend:', error);
     } finally {
-      setIsLoading(false); // Set loading state back to false
+      // Set loading state back to false
+      setIsLoading(false);
     }
-    // // Scroll to the bottom of the chatlog
-    // if (messageEndRef.current !== null) {
-    //   messageEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    // }
   };
 
+  // Effect to scroll to the end of chatlog whenever it changes
   useEffect(() => {
-    if (messageEndRef.current === null) return;
-    messageEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (messageEndRef.current !== null) {
+      messageEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   }, [chatlog]);
 
+  // JSX rendering
   return (
     <div className='w-full'>
       <div className='flex h-[89.3vh] flex-col bg-gray-900'>

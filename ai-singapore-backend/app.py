@@ -1,3 +1,4 @@
+# Import necessary libraries
 from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -8,15 +9,20 @@ from langchain.prompts import PromptTemplate
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
+# Load environment variables
 load_dotenv()
+
+# Initialize OpenAI embeddings
 embeddings = OpenAIEmbeddings()
 
+# Load FAISS index for retrieval
 db_openAI = FAISS.load_local("openAI_index", embeddings, allow_dangerous_deserialization=True)
-
 retriever = db_openAI.as_retriever(search_kwargs={'k':2})
 
+# Initialize OpenAI Chat model
 llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0125")
 
+# Define prompt template for conversation
 prompt_template = """
 
 Your role now is to a help assistant that excel in providing career advice and course related issue with the provided context.
@@ -56,26 +62,31 @@ to use the chat history.
 "chat_history":{chat_history}
 """
 
+# Define PromptTemplate
 prompt = PromptTemplate(
     input_variables=["context","question","chat_history"],
     template=prompt_template,
 )
 
+# Initialize ConversationBufferMemory
 memory = ConversationBufferMemory(
     memory_key="chat_history",
     input_key="question",
     return_messages=True
 )
 
+# Initialize ConversationalRetrievalChain
 qa_with_source = ConversationalRetrievalChain.from_llm(
    llm=llm, retriever=retriever, memory=memory,
    return_source_documents=False,
    combine_docs_chain_kwargs={'prompt': prompt}
 )
 
+# Initialize Flask app
 app = Flask(__name__)
 CORS(app)
 
+# Define route for processing messages
 @app.route('/', methods=['POST'])
 def process_message():
     message = request.get_json().get('message')
@@ -84,4 +95,5 @@ def process_message():
     result = retrieved.get('answer')
     return jsonify(result)
 
+# Run the app
 app.run(use_reloader = False, debug = True)
