@@ -33,7 +33,7 @@ The SkillFuture portal is a treasure trove of learning opportunities, but its sh
 ### Installation
 Clone the repository :
 
-`https://github.com/devapraveenk/FAQ_Chatbot_using_LangChain_V1.git`
+`https://github.com/OakesOng/AiSingapore24`
 
 
 Create a virtual environment :
@@ -46,7 +46,7 @@ Install the required dependencies in the virtual environment :
 `pip install -r requirements.txt`
 
 Upload your Google PaLM API in .env file:
-<img width="1101" alt="Screenshot 2023-12-09 at 1 11 25 AM" src="https://github.com/devapraveenk/FAQ_Chatbot_using_LangChain_V1/assets/115524697/ddb04ade-ed50-4aa6-b292-c0f7d35e206a">
+<img width="1101" alt="Screenshot 2023-12-09 at 1 11 25 AM" src="https://github.com/OakesOng/AiSingapore24/env.png">
 
 
 Launch the chat service locally :
