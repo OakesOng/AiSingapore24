@@ -46,7 +46,7 @@ Install the required dependencies in the virtual environment :
 `pip install -r requirements.txt`
 
 Upload your Google PaLM API in .env file:
-<img width="1101" alt="Screenshot 2023-12-09 at 1 11 25 AM" src="https://github.com/OakesOng/AiSingapore24/env">
+<img width="1101" alt=".env file" src="https://github.com/OakesOng/AiSingapore24/blob/main/env.png">
 
 
 Launch the chat service locally :
