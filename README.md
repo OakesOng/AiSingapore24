@@ -21,7 +21,8 @@ The SkillFuture portal is a treasure trove of learning opportunities, but its sh
 
 5. **Personalized Recommendations**<br>
 ✔️ Old Bird doesn’t stop at generic suggestions. It crafts bespoke course recommendations based on your
- <br> &emsp;&nbsp;  unique profile. Whether you’re a fresh graduate, a mid-career switcher, or an aspiring entrepreneur, Old Bird has you covered.
+ <br> &emsp;&nbsp;  unique profile. Whether you’re a fresh graduate, a mid-career switcher, or an aspiring entrepreneur, Old Bird
+ <br> &emsp;&nbsp;  has you covered.
 
 ## Running Locally 💻
 
