@@ -7,7 +7,7 @@
 ## Problem Statement
 The SkillFuture portal is a treasure trove of learning opportunities, but its sheer volume can overwhelm users. Navigating through countless courses to find the perfect fit based on individual circumstances, goals, and aspirations is a daunting task. Enter Old Bird—your personalized course companion.
 
-## Demo
+## Short Demo
 ![Demo](https://github.com/OakesOng/AiSingapore24/blob/main/Demo.gif)
 
 ## Key Features
