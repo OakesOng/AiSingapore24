@@ -10,18 +10,18 @@ The SkillFuture portal is a treasure trove of learning opportunities, but its sh
 ## Key Features
 1. **Conversational Interface** <br>
 ✔️ Old Bird engages users in natural language conversations. No more rigid search queries or checkboxes.
-<br> &emsp;&nbsp;Simply chat with
+<br> &emsp;&nbsp; Simply chat with
  him, express your needs, and receive tailored recommendations.<br>
 ✔️ Old Bird’s supportive personality and empathetic approach create a user-friendly experience.
 
 3. **Powered by Retrieved Augmented Generation (RAG) Technology** <br> 
-✔️ Old Bird understands context, nuances, and user preferences. It retrieves relevant courses, considering factors like career 
-<br> &emsp;&nbsp; stage, interests, and time availability.<br>
+✔️ Old Bird understands context, nuances, and user preferences. It retrieves relevant courses, considering factors
+<br> &emsp;&nbsp; like career stage, interests, and time availability.<br>
 ✔️ Old Bird automatically provides direct course links to MySkillsFuture Portal for users’ convenience.
 
-4. **Personalized Recommendations**<br>
-✔️ Old Bird doesn’t stop at generic suggestions. It crafts bespoke course recommendations based on your unique profile.
- <br> &emsp;&nbsp;  Whether you’re a fresh graduate, a mid-career switcher, or an aspiring entrepreneur, Old Bird has you covered.
+5. **Personalized Recommendations**<br>
+✔️ Old Bird doesn’t stop at generic suggestions. It crafts bespoke course recommendations based on your
+ <br> &emsp;&nbsp;  unique profile. Whether you’re a fresh graduate, a mid-career switcher, or an aspiring entrepreneur, Old Bird has you covered.
 
 ## Running Locally 💻
 
