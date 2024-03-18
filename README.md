@@ -67,5 +67,5 @@ python app.py
 #### That's it! The service is now up and running locally. 🤗
 
 ## Software Architecture
-<img width="1100" alt="Software Architecture" src="https://github.com/OakesOng/AiSingapore24/blob/main/Software%20Achitechure.drawio.png">
+<img width="900" alt="Software Architecture" src="https://github.com/OakesOng/AiSingapore24/blob/main/Software%20Achitechure.drawio.png">
 
