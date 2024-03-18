@@ -45,8 +45,8 @@ Install the required dependencies in the virtual environment :
 
 `pip install -r requirements.txt`
 
-Upload your Google PaLM API in .env file:
-<img width="1101" alt=".env file" src="https://github.com/OakesOng/AiSingapore24/blob/main/env.png">
+Enter your OpenAI API Key into a .env file:
+<img width="900" alt=".env file" src="https://github.com/OakesOng/AiSingapore24/blob/main/env.png">
 
 
 Launch the chat service locally :
