@@ -47,7 +47,7 @@ Install the required dependencies in the virtual environment :
 `pip install -r requirements.txt`
 
 Enter your OpenAI API Key into a .env file:
-<img width="900" height = "200" alt=".env file" src="https://github.com/OakesOng/AiSingapore24/blob/main/env.png">
+<img width="900" height = "500" alt=".env file" src="https://github.com/OakesOng/AiSingapore24/blob/main/env.png">
 
 
 Launch a terminal for frontend:
@@ -67,5 +67,5 @@ python app.py
 #### That's it! The service is now up and running locally. 🤗
 
 ## Software Architecture
-<img width="900" height = "200" alt="Software Architecture" src="https://github.com/OakesOng/AiSingapore24/blob/main/Software%20Achitechure.drawio.png">
+<img width="900" height = "500" alt="Software Architecture" src="https://github.com/OakesOng/AiSingapore24/blob/main/Software%20Achitechure.drawio.png">
 
