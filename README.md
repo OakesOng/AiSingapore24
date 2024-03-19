@@ -11,7 +11,7 @@ The SkillFuture portal is a treasure trove of learning opportunities, but its sh
 ![Demo](https://github.com/OakesOng/AiSingapore24/blob/main/Demo.gif)
 
 ## Video
-[![Watch the video]()](https://drive.google.com/file/d/1nNIqmzlKo7vBO9z4Q_hnPeflI6Qnnbl3/view)
+[![Watch the video](https://github.com/OakesOng/AiSingapore24/blob/main/misc/Old%20Bird.png)](https://drive.google.com/file/d/1nNIqmzlKo7vBO9z4Q_hnPeflI6Qnnbl3/view)
 
 ## Key Features
 1. **Conversational Interface** <br>
