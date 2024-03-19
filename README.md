@@ -73,12 +73,13 @@ python app.py
 <img width="900" height = "600" alt="Software Architecture" src="https://github.com/OakesOng/AiSingapore24/blob/main/Software%20Achitechure.drawio.png">
 
 ## Performance
-We evaluate the model based on the following metrics with a total of 30 test cases.<br/>
-Relevance - Is the model's answer relevant to user's query? Binary (relevant/not relevant)<br/>
-Accuracy - Does the retrieved information correctly answer user's query? Binary (correct/not correct)<br/>
-Rationale - Is the model's answer reasonable? Binary(reasonable/not reasonable)<br/>
-Satisfactory - Is the model's answer overall satisfactory? Binary (satisfactory/not satisfactory)<br/>
-<br/>
+Our evaluation framework rigorously assesses the model across four binary metrics, utilizing a dataset of 30 test cases:
+
+- Relevance: Does the model’s response align with the user’s query?
+- Accuracy: Is the information provided by the model correct in addressing the user’s query?
+- Rationale: Does the model’s answer demonstrate sound reasoning?
+- Satisfaction: Does the model’s response meet the overall satisfaction criteria?
+
 Relevance - 23/30<br/>
 Accuracy - 25/30<br/>
 Rationale - 23/30<br/>
