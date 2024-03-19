@@ -75,9 +75,9 @@ python app.py
 ## Performance
 Our evaluation framework assesses the model across four binary metrics, utilizing a dataset of 30 test cases, is quantified as follows, with scores normalized to a 100-point scale:
 
-### Relevance: 77% - Alignment of the model’s responses with user queries.
-### Accuracy: 83% - Correctness of the information provided by the model.
-### Rationale: 77% - Reasonableness of the model’s answers.
-### Satisfaction: 53% - Overall user satisfaction with the model’s answers.
+**Relevance**: 77% - Alignment of the model’s responses with user queries.
+**Accuracy**: 83% - Correctness of the information provided by the model.
+**Rationale**: 77% - Reasonableness of the model’s answers.
+**Satisfaction**: 53% - Overall user satisfaction with the model’s answers.
 
 These metrics reflect our commitment to continuous improvement and user-centric optimization. 😊
