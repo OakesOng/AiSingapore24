@@ -30,7 +30,7 @@ The SkillFuture portal is a treasure trove of learning opportunities, but its sh
 ## Running Locally 💻
 
 ### Prerequisites
-- Python 3.11.8 or higher
+- Python 3.12.2 or higher
 - Node.js 20.11.1
 - Git
 
