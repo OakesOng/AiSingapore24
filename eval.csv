@@ -1,5 +1,6 @@
 input,expected_output,actual_output,relevance,correctness,justification
 hello,model to greet the user back,Hey there! How can I assist you today?,1,nil,model correctly greeted the user
+any prompt. hello,model to address user's first query then reply with a greeting,model address user's first query then used the same response in the greeting,0,nil,model did not greet the user back after the first user query
 what can you do,model to respond with its functions,I can provide career advice and help with course-related issues. If you have any questions or need guidance feel free to ask!,1,nil,model correctly responded with its functions
 recommend a course for data science,model to recommend any course for data science,Intro to data science TGS-2015502922 (truncated),1,1,model correctly recommended a course for data science. the course retrieved matches with user query
 recommend a course for note taking,model to recommend any course for note taking,Minute Writing Skills TGS-2019500462 (truncated),1,1,model correctly recommended a course for note taking. the course retrieved matches with user query
