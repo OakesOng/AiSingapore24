@@ -75,4 +75,11 @@ python app.py
 ## Performance
 We evaluate the model based on the following metrics.<br/>
 Relevance - Is the model's answer relevant to user's query? Binary (relevant/not relevant)<br/>
-Correctness - Does the retrieved information correctly answer user's query? Binary (correct/not correct)<br/>
+Accuracy - Does the retrieved information correctly answer user's query? Binary (correct/not correct)<br/>
+Rationale - Is the model's answer reasonable? Binary(reasonable/not reasonable)<br/>
+Satisfactory - Is the model's answer overall satisfactory? Binary (satisfactory/not satisfactory)<br/>
+<br/>
+Relevance - 23/30<br/>
+Accuracy - 25/30<br/>
+Rationale - 23/30<br/>
+Satisfactory - 16/30
