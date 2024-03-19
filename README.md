@@ -73,7 +73,7 @@ python app.py
 #### That's it! The service is now up and running locally. 🤗
 
 ## Software Architecture
-<img width="900" height = "600" alt="Software Architecture" src="https://github.com/OakesOng/AiSingapore24/blob/main/Software%20Achitechure.drawio.png">
+<img width="900" height = "600" alt="Software Architecture" src="https://github.com/OakesOng/AiSingapore24/blob/main/Software%20Architechure.png">
 
 ## Performance
 Our evaluation framework assesses the model across four binary metrics, utilizing a dataset of 30 test cases, is quantified as follows, with scores normalized to a 100-point scale:
