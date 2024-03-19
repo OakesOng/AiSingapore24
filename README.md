@@ -85,4 +85,4 @@ Our evaluation framework assesses the model across four binary metrics, utilizin
 
 Data for our justification could be found in `misc/App Test Data.xlsx`
 
-NOTE: Optimized with GPT-3.5-turbo for cost-efficiency and over 3000 courses sets the above result. Upgrades to GPT-4-turbo and dataset expansion promise marked performance gains.
+NOTE: Optimized with GPT-3.5-turbo for cost-efficiency and over 3000 courses sets the above result. Upgrade to GPT-4-turbo and dataset expansion promise marked performance gains.
