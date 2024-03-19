@@ -72,3 +72,7 @@ python app.py
 ## Software Architecture
 <img width="900" height = "600" alt="Software Architecture" src="https://github.com/OakesOng/AiSingapore24/blob/main/Software%20Achitechure.drawio.png">
 
+## Performance
+We evaluate the model based on the following metrics.<br/>
+Relevance - Is the model's answer relevant to user's query? Binary (relevant/not relevant)<br/>
+Correctness - Does the retrieved information correctly answer user's query? Binary (correct/not correct)<br/>
